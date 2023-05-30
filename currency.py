@@ -12,8 +12,20 @@ def get_currency_list():
     # Extract the currency symbols from the response data
     currency_list = list(data['rates'].keys())
 
-    print(str(currency_list))
     return currency_list
+
+# Get the list of currency options
+currency_options = get_currency_list()
+
+# print the list of currency options in green
+print(f"\n{GREEN}Currency options:{RESET}", currency_options)
+# ask the user for the amount to convert
+amount = float(input("\nEnter the amount to convert: "))
+# ask the user for the currency to convert from
+from_currency = input("Enter the currency to convert from: ").upper()
+# ask the user for the currency to convert to
+to_currency = input("Enter the currency to convert to: ").upper()
+
 
 get_currency_list()
 
