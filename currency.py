@@ -16,3 +16,8 @@ def get_currency_list():
     return currency_list
 
 get_currency_list()
+
+# so far so good, prints a list of currency symbols, but I want to print the currency symbols in green;
+# need to accept a value from the user, and let them select the current currency
+# then need to let the user select what currency they want to convert to
+# then calculate the conversion value
