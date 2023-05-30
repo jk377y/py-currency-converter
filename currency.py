@@ -9,4 +9,10 @@ def get_currency_list():
     response = requests.get(url)
     data = response.json()
 
-    
+    # Extract the currency symbols from the response data
+    currency_list = list(data['rates'].keys())
+
+    print(str(currency_list))
+    return currency_list
+
+get_currency_list()
